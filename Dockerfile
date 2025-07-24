@@ -27,4 +27,4 @@ RUN npm install --unsafe-perm --no-update-notifier --no-fund --only=production
 EXPOSE 1880
 
 # Start Node-RED
-ENTRYPOINT ["npm","start"]
+ENTRYPOINT ["node-red"]
