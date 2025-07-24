@@ -4,16 +4,15 @@ FROM nodered/node-red
 USER root
 
 # Copy your local node-red folder into the image
-COPY . /data
+COPY ./flows.json /data/flows.json
+COPY ./settings.js /data/settings.js
+COPY ./package.json /data/package.json
 
 # Ensure the /data directory has correct permissions for node-red user
 RUN chown -R node-red:node-red /data
 
 # Switch back to node-red user
 USER node-red
-
-# Set working directory
-WORKDIR /data
 
 # Install the modules defined in package.json
 
