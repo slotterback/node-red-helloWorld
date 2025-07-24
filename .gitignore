@@ -1,1 +1,9 @@
 *.backup
+package-lock.json
+.npm/
+node_modules/
+lib/
+context/
+projects/
+.config.*
+settings.js

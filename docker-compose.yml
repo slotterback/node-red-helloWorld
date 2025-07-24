@@ -1,0 +1,9 @@
+services:
+  node-red-test:
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    ports: 
+     - 1880:1880
+    volumes:
+      - "./:/data"

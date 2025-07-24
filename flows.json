@@ -1,1 +1,57 @@
-[]
+[
+    {
+        "id": "75bffcf29575e7e5",
+        "type": "tab",
+        "label": "Flow 2",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "104925e3666a896c",
+        "type": "template",
+        "z": "75bffcf29575e7e5",
+        "name": "",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "Hello World!",
+        "output": "str",
+        "x": 440,
+        "y": 300,
+        "wires": [
+            [
+                "d3f93346b876c159"
+            ]
+        ]
+    },
+    {
+        "id": "bcb0cc09bc63e440",
+        "type": "http in",
+        "z": "75bffcf29575e7e5",
+        "name": "",
+        "url": "/hello-world",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 220,
+        "y": 300,
+        "wires": [
+            [
+                "104925e3666a896c"
+            ]
+        ]
+    },
+    {
+        "id": "d3f93346b876c159",
+        "type": "http response",
+        "z": "75bffcf29575e7e5",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 650,
+        "y": 300,
+        "wires": []
+    }
+]
